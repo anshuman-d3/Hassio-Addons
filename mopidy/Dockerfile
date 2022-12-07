@@ -1,11 +1,11 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-ENV MOPIDY_VERSION='2.3.1-1'
-ENV YOUTUBEDL_VERSION='2019.11.28'
+ENV MOPIDY_VERSION='3.3.0-1'
+ENV YOUTUBEDL_VERSION='2021.12.17'
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
-RUN apt-get update && apt-get -y --no-install-recommends install wget=1.20.1-1.1 gnupg=2.2.12-1+deb10u1 &&\
+RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     wget -q -O - https://apt.mopidy.com/mopidy.gpg | apt-key add - &&\
     debian_codename=$(dpkg --status tzdata | grep Provides | cut -f2 -d'-') &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/${debian_codename}.list" &&\
@@ -21,7 +21,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget=1.20.1-1.1
         sudo=1.8.27-1+deb10u1 &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip install youtube-dl=="$YOUTUBEDL_VERSION" certifi=="$YOUTUBEDL_VERSION" pafy==0.5.5 Mopidy-Iris==3.42.2 Mopidy-Local-SQLite==1.0.0 
+RUN pip install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite 
 # hadolint ignore=DL3013
 RUN pip install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
 #Let mopidy run local scans

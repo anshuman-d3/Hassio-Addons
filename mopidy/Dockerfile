@@ -13,12 +13,12 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     apt-get -y --no-install-recommends install \
         mopidy=${MOPIDY_VERSION} \
         jq=1.5+dfsg-2+b1 \
-        python-pip=18.1-5 \
-        python-setuptools=40.8.0-1 \
-        python-wheel=0.32.3-2 \
-        gstreamer1.0-alsa=1.14.4-2 \
-        gstreamer1.0-plugins-bad=1.14.4-1+b1 \
-        sudo=1.8.27-1+deb10u1 &&\
+        python3-pip \
+        python3-setuptools \
+        python3-wheel \
+        gstreamer1.0-alsa \
+        gstreamer1.0-plugins-bad \
+        sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite 

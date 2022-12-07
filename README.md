@@ -1,4 +1,4 @@
-# Poeschl Hassio Addons  [![Travis master](https://img.shields.io/travis/Poeschl/Hassio-Addons/master.svg?maxAge=3600)](https://travis-ci.org/Poeschl/Hassio-Addons/)
+# V1 Hassio Addons
 
 My repository with plugins for the [Hass.io](https://www.home-assistant.io/hassio/) system
 
@@ -15,5 +15,5 @@ Plugins:
 ### Licence  ![Licence](https://img.shields.io/github/license/Poeschl/Hassio-Addons)
 
 The licence of the repository is inherited by the plugins, if not stated different.
-
-[![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/Poeschl)
+ 
+[![Buy Poeschl A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png)](https://www.buymeacoffee.com/Poeschl)

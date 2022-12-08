@@ -5,8 +5,8 @@ bashio::log.info 'Update Certificates'
 update-ca-certificates
 
 bashio::log.info 'Create media folder if not existing'
-mkdir -p /share/mopidy/media
-mkdir -p /share/mopidy/playlists
+mkdir -p /media/mopidy/files
+mkdir -p /media/mopidy/playlists
 
 bashio::log.info 'Setup config'
 local_scan=$(cat /data/options.json | jq -r '.local_scan // empty')

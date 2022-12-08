@@ -7,8 +7,7 @@ ENV YOUTUBEDL_VERSION='2021.12.17'
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     wget -q -O - https://apt.mopidy.com/mopidy.gpg | apt-key add - &&\
-    debian_codename=$(dpkg --status tzdata | grep Provides | cut -f2 -d'-') &&\
-    wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/${debian_codename}.list" &&\
+    wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\
     apt-get update &&\
     apt-get -y --no-install-recommends install \
         mopidy=${MOPIDY_VERSION} \
@@ -21,14 +20,14 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-MPRIS Mopidy-MPD
+RUN pip3 install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-MPRIS
 
 # YouTube
 # hadolint ignore=DL3013
 RUN pip install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
 
 # Let mopidy run local scans
-RUN echo "mopidy ALL=NOPASSWD: /usr/local/lib/python2.7/dist-packages/mopidy_iris/system.sh" >> /etc/sudoers
+RUN echo "mopidy ALL=NOPASSWD: /usr/local/lib/python3.7/dist-packages/mopidy_iris/system.sh" >> /etc/sudoers
 
 COPY mopidy.conf /share/mopidy/mopidy.conf
 

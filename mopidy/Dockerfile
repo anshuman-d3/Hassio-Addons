@@ -12,7 +12,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     apt-get update &&\
     apt-get -y --no-install-recommends install \
         mopidy=${MOPIDY_VERSION} \
-        jq=1.5+dfsg-2+b1 \
+        jq \
         python3-pip \
         python3-setuptools \
         python3-wheel \

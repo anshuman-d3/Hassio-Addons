@@ -21,10 +21,13 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite 
+RUN pip install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-MPRIS Mopidy-MPD
+
+# YouTube
 # hadolint ignore=DL3013
 RUN pip install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
-#Let mopidy run local scans
+
+# Let mopidy run local scans
 RUN echo "mopidy ALL=NOPASSWD: /usr/local/lib/python2.7/dist-packages/mopidy_iris/system.sh" >> /etc/sudoers
 
 COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf

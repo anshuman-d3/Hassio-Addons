@@ -30,7 +30,7 @@ RUN pip install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
 # Let mopidy run local scans
 RUN echo "mopidy ALL=NOPASSWD: /usr/local/lib/python2.7/dist-packages/mopidy_iris/system.sh" >> /etc/sudoers
 
-COPY mopidy.conf /var/lib/mopidy/.config/mopidy/mopidy.conf
+COPY mopidy.conf /share/mopidy/mopidy.conf
 
 COPY run.sh /
 RUN chmod a+x /run.sh

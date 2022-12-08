@@ -6,7 +6,7 @@
   "description": "Mopidy Music Server (V-Version)",
   "url": "https://github.com/v1-valux/Hassio-Addons/tree/master/mopidy",
   "webui": "http://[HOST]:[PORT:6680]/iris",
-  "ingress": true,
+  "ingress": false,
   "ingress_port": 6680,
   "ingress_entry": "iris/",
   "arch": [

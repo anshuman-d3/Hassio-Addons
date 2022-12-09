@@ -1,6 +1,6 @@
 {
   "name": "Mopidy",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "slug": "mopidy",
   "panel_icon": "mdi:music-circle",
   "description": "Mopidy Music Server (V-Version)",
@@ -16,6 +16,7 @@
   ],
   "startup": "application",
   "boot": "auto",
+  "image": "poeschl/hassio-mopidy-{arch}",
   "audio": true,
   "devices": ["/dev/snd:/dev/snd:rwm"],
   "map": ["share:rw"],

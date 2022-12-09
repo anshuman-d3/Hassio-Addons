@@ -11,9 +11,7 @@
   "ingress_entry": "iris/",
   "arch": [
     "armv7",
-    "armhf",
-    "amd64",
-    "i386"
+    "amd64"
   ],
   "startup": "application",
   "boot": "auto",

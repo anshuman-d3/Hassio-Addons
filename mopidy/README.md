@@ -5,19 +5,14 @@
 ![i386 image pulls](https://img.shields.io/docker/pulls/poeschl/hassio-mopidy-i386?label=docker%20pulls%20%28i386%29)
 
 Mopidy with plugins for Hass.io. It enabled the host to play audio.
-This plugin is based on the [image from _jojo141185_](https://hub.docker.com/r/jojo141185/mopidy).
+This plugin is based on the [addon from _bestlibre_](https://github.com/bestlibre/hassio-addons/tree/master/mopidy).
 
 It is build with following extensions:
 
-* DLNA Server
-* MPD Server
-* Youtube & YTMusic
-* Jellyfin
-* Podcast
-* RadioNet
-* Soundcloud
-* TuneIn
-* MusicBox & Party Webclient
+* [Mopidy-Local](https://docs.mopidy.com/en/latest/ext/local/)
+* [Mopidy-Stream](https://docs.mopidy.com/en/latest/ext/stream/)
+* [Mopidy-YouTube](https://github.com/mopidy/mopidy-youtube)
+* [Mopidy-Iris](https://github.com/jaedb/iris)
 
 Mopidy listens on `6680` for http connections, and `6600` for mpd ones.
 

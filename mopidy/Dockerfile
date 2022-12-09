@@ -1,8 +1,8 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-#ENV MOPIDY_VERSION='3.3.0-1'
-#ENV YOUTUBEDL_VERSION='2021.12.17'
+ENV MOPIDY_VERSION='3.3.0-1'
+ENV YOUTUBEDL_VERSION='2021.12.17'
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\

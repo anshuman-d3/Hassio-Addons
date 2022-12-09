@@ -6,7 +6,7 @@ ENV YOUTUBEDL_VERSION='2021.12.17'
 
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
-    mkdir -p /usr/local/share/keyrings/
+    mkdir -p /usr/local/share/keyrings/ &&\
     wget -q -O /usr/local/share/keyrings/mopidy-archive-keyring.gpg \
     https://apt.mopidy.com/mopidy.gpg &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\

@@ -1,6 +1,6 @@
 {
   "name": "Mopidy",
-  "version": "edge",
+  "version": "0.0.1",
   "slug": "mopidy",
   "panel_icon": "mdi:music-circle",
   "description": "Mopidy Music Server (V-Version)",
@@ -10,12 +10,12 @@
   "ingress_port": 6680,
   "ingress_entry": "iris/",
   "arch": [
+    "armhf",
     "armv7",
-    "amd64"
+    "aarch64"
   ],
   "startup": "application",
   "boot": "auto",
-  "image": "jojo141185/mopidy",
   "audio": true,
   "devices": ["/dev/snd:/dev/snd:rwm"],
   "map": ["share:rw"],

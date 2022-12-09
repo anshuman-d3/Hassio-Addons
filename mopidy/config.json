@@ -1,6 +1,6 @@
 {
   "name": "Mopidy",
-  "version": "1.2.0",
+  "version": "edge",
   "slug": "mopidy",
   "panel_icon": "mdi:music-circle",
   "description": "Mopidy Music Server (V-Version)",

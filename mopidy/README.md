@@ -26,7 +26,7 @@ Since Mopidy-Iris don't play well (at least out-of-the-box) with the ingress fea
 
 ```yaml
 panel_iframe:
-  morpidy:
+  mopidy:
     title: 'Morpidy'
     icon: 'mdi:music-circle'
     url: 'http://<homeassistant-address>:6680/iris'

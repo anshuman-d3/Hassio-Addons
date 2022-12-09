@@ -24,7 +24,7 @@ RUN pip3 install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local-SQLite Mopidy-
 
 # YouTube
 # hadolint ignore=DL3013
-RUN pip install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
+RUN pip3 install https://github.com/natumbri/mopidy-youtube/archive/develop.zip
 
 # Let mopidy run local scans
 RUN echo "mopidy ALL=NOPASSWD: /usr/local/lib/python3.7/dist-packages/mopidy_iris/system.sh" >> /etc/sudoers

@@ -10,9 +10,10 @@
   "ingress_port": 6680,
   "ingress_entry": "iris/",
   "arch": [
-    "armhf",
     "armv7",
-    "aarch64"
+    "armhf",
+    "amd64",
+    "i386"
   ],
   "startup": "application",
   "boot": "auto",

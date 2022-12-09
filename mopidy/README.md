@@ -19,7 +19,7 @@ It is build with following extensions:
 * TuneIn
 * MusicBox & Party Webclient
 
-Mopidy listen on `6680` for http connection, and `6600` for mpd ones.
+Mopidy listens on `6680` for http connections, and `6600` for mpd ones.
 
 ## Local Media
 The local media can be stored on `/share` (which allow an access through the samba addon).

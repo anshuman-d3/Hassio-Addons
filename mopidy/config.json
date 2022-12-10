@@ -9,6 +9,7 @@
   "ingress": true,
   "ingress_port": 6680,
   "ingress_entry": "iris/",
+  "init": false,
   "arch": [
     "armv7",
     "armhf",

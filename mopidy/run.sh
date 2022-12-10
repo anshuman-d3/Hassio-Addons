@@ -15,6 +15,6 @@ config="/share/mopidy/mopidy.conf"
 
 bashio::log.info 'Start Mopidy....'
 if  [ "$local_scan" == "true" ]; then
-    mopidy --config "$config" "$options" local scan
+    mopidy --config "$config" $options local scan
 fi
-mopidy --config "$config" "$options"
+mopidy --config "$config" $options

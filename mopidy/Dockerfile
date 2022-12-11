@@ -12,7 +12,6 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\
     apt-get update &&\
     apt-get -y --no-install-recommends install \
-        curl \
         mopidy=${MOPIDY_VERSION} \
         jq \
         python3-pip \
@@ -20,25 +19,6 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         python3-wheel \
         gstreamer1.0-alsa \
         gstreamer1.0-plugins-bad \
-        git \
-        build-essential \
-        libasound2-dev \
-        libvorbisidec-dev \
-        libvorbis-dev \
-        libflac-dev \
-        alsa-utils \
-        libavahi-client-dev \
-        avahi-daemon \
-        build-essential \
-        debhelper \
-        dh-make \
-        dh-systemd \
-        quilt \
-        fakeroot \
-        lintian \
-        mopidy \
-        mopidy-spotify \
-        mopidy-local-sqlite \
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 

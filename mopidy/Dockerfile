@@ -31,6 +31,11 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         avahi-daemon \
         build-essential \
         debhelper \
+        dh-make \
+        dh-systemd \
+        quilt \
+        fakeroot \
+        lintian \
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 

@@ -4,7 +4,6 @@ FROM $BUILD_FROM
 ENV MOPIDY_VERSION='3.3.0-1'
 ENV YOUTUBEDL_VERSION='2021.12.17'
 
-SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN set -ex \
     # Official Mopidy install for Debian/Ubuntu along with some extensions
     # (see https://docs.mopidy.com/en/latest/installation/debian/ )
@@ -25,6 +24,7 @@ RUN set -ex \
     && apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
         jq mopidy mopidy-spotify mopidy-local-sqlite
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     mkdir -p /usr/local/share/keyrings/ &&\
     wget -q -O /usr/local/share/keyrings/mopidy-archive-keyring.gpg \

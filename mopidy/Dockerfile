@@ -27,6 +27,10 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         libvorbis-dev \
         libflac-dev \
         alsa-utils \
+        libavahi-client-dev \
+        avahi-daemon \
+        build-essential \
+        debhelper \
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 

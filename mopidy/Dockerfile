@@ -33,7 +33,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* \
     && apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        jq mopidy-spotify mopidy-local-sqlite \
+        jq mopidy-spotify mopidy-local-sqlite
 
 RUN pip3 install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-YTMusic
 

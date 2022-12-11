@@ -30,10 +30,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         gstreamer1.0-alsa \
         gstreamer1.0-plugins-bad \
         sudo &&\
-    apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* \
-    && apt-get update \
-    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
-        jq mopidy-spotify mopidy-local-sqlite
+    apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-YTMusic
 

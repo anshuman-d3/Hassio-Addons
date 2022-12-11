@@ -12,6 +12,16 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\
     apt-get update &&\
     apt-get -y --no-install-recommends install \
+        build-essential \
+        curl \
+        gcc \
+        gstreamer1.0-fluendo-mp3 \
+        gstreamer1.0-libav \
+        libxml2-dev \
+	    libxslt-dev \
+        libz-dev \
+	    python-crypto \
+	    python-dev \
         mopidy=${MOPIDY_VERSION} \
         jq \
         python3-pip \
@@ -20,9 +30,12 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         gstreamer1.0-alsa \
         gstreamer1.0-plugins-bad \
         sudo &&\
-    apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
+    apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/* \
+    && apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        jq mopidy-spotify mopidy-local-sqlite \
 
-RUN pip3 install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-Spotify Mopidy-YTMusic
+RUN pip3 install youtube-dl certifi pafy Mopidy-Iris Mopidy-Local Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-YTMusic
 
 # YouTube
 # hadolint ignore=DL3013

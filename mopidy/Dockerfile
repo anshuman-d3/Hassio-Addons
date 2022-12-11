@@ -22,7 +22,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install youtube-dl certifi pafy requests Mopidy-Iris Mopidy-Local Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-YTMusic
+RUN pip3 install youtube-dl certifi pafy requests==2.28.1 charset-normalizer idna importlib-metadata pykka pytube ytmusicapi Mopidy-Iris Mopidy-Local Mopidy-SoundCloud Mopidy-InternetArchive Mopidy-YTMusic
 
 # YouTube
 # hadolint ignore=DL3013

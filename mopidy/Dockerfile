@@ -24,6 +24,9 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         build-essential \
         libasound2-dev \
         libvorbisidec-dev \
+        libvorbis-dev \
+        libflac-dev \
+        alsa-utils \
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 

@@ -11,7 +11,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     https://apt.mopidy.com/mopidy.gpg &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\
     apt-get update &&\
-    DEBIAN_FRONTEND=noninteractive apt-get -y --no-install-recommends install \
+    apt-get -y --no-install-recommends install \
         url \
         git \
         build-essential \

@@ -12,16 +12,6 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\
     apt-get update &&\
     apt-get -y --no-install-recommends install \
-        build-essential \
-        curl \
-        gcc \
-        gstreamer1.0-fluendo-mp3 \
-        gstreamer1.0-libav \
-        libxml2-dev \
-	    libxslt-dev \
-        libz-dev \
-	    python-crypto \
-	    python-dev \
         mopidy=${MOPIDY_VERSION} \
         jq \
         python3-pip \

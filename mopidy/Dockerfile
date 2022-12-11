@@ -12,23 +12,7 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
     wget -q -O /etc/apt/sources.list.d/mopidy.list "https://apt.mopidy.com/buster.list" &&\
     apt-get update &&\
     apt-get -y --no-install-recommends install \
-        url \
-        git \
-        build-essential \
-        libasound2-dev \
-        libvorbisidec-dev \
-        libvorbis-dev \
-        libflac-dev \
-        alsa-utils \
-        libavahi-client-dev \
-        avahi-daemon \
-        build-essential \
-        debhelper \
-        dh-make \
-        dh-systemd \
-        quilt \
-        fakeroot \
-        lintian \
+        curl \
         mopidy=${MOPIDY_VERSION} \
         jq \
         python3-pip \

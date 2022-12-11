@@ -20,6 +20,10 @@ RUN apt-get update && apt-get -y --no-install-recommends install wget gnupg &&\
         python3-wheel \
         gstreamer1.0-alsa \
         gstreamer1.0-plugins-bad \
+        git \
+        build-essential \
+        libasound2-dev \
+        libvorbisidec-dev \
         sudo &&\
     apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
